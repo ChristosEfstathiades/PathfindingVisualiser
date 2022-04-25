@@ -1,0 +1,10 @@
+clean up code
+    then refine functions (create more fucntions / shorten code)
+
+define local variables with let x instead of this.x
+
+
+write insertion in design
+
+edit previous node function for dijkstra
+create tutorial modal popup
