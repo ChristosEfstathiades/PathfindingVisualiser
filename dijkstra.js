@@ -46,8 +46,9 @@ class Dijkstra
                     }
                 }
             });
-
+            workingNodes = this.insertionSort(workingNodes, workingNodes.length)
             let selectedNode = workingNodes.shift() // select node with smallest working value and make it the final value
+
             if (!this.isPathPossible(selectedNode)) {
                 alert("path not possible")
             }
@@ -64,7 +65,6 @@ class Dijkstra
         const length = this.board[currentY][currentX].workingValue
         let path = this.generatePath(currentX, currentY) // Find shortest path from array of shortest distances to head node
         path.pop() // remove head node from path so its not animated
-        console.log(this.board)
         return {
             selectedNodes: selectedNodes,
             path: path,
@@ -86,6 +86,23 @@ class Dijkstra
             return true
         }
         return false
+    }
+
+    insertionSort(arr, n)
+    {
+        let i, key, j; 
+        for (i = 1; i < n; i++)
+        { 
+            key = arr[i]; 
+            j = i - 1; 
+            while (j >= 0 && arr[j].workingValue > key.workingValue)
+            { 
+                arr[j + 1] = arr[j]; 
+                j = j - 1; 
+            } 
+            arr[j + 1] = key; 
+        } 
+        return arr
     }
 
     generatePath(x, y) 
