@@ -51,6 +51,11 @@ class Dijkstra
 
             if (!this.isPathPossible(selectedNode)) {
                 alert("path not possible")
+                return {
+                    selectedNodes: selectedNodes,
+                    path: [],
+                    length: 0
+                }  
             }
 
             currentX = selectedNode.x

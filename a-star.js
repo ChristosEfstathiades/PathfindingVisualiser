@@ -79,6 +79,12 @@ class Astar
             });
         }
         alert("path not possible")
+        closedSet.shift()
+        return {
+            selectedNodes: closedSet,
+            path: [],
+            length: 0
+        }
         
     }
 

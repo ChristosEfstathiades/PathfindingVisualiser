@@ -2,7 +2,7 @@ class Board
 {
     grid = document.querySelector(".board") // Element that contains grid of nodes
     cols = Math.floor(window.innerWidth / 35) // How many squares the grid can fit across the width
-    rows = Math.floor((window.innerHeight-100) / 35) // How many squares the grid can fit across the height
+    rows = Math.floor((window.innerHeight - 126) / 35) // How many squares the grid can fit across the height
     hoverEnabled = false; // Boolean variable
     obstacle = "wall";
     weightVal = 5;

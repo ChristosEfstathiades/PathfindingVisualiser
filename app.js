@@ -11,7 +11,7 @@ startBtn.addEventListener("click", () => {
     let algorithm = new Algorithm(board.rows, board.cols); 
     let selectedAlgorithm = document.querySelector(".algorithm").value // Fetch selected algorithm
     let speed = document.querySelector(".speed").value // Fetch selected speed
-    speed == "fast" ? speed = 0 : speed == "normal" ? speed = 100 : speed = 500 // milliseconds per animated cell
+    speed == "fast" ? speed = 0 : speed == "normal" ? speed = 100 : speed = 500 //milliseconds per animated cell
     algorithm.execute(selectedAlgorithm, speed) // Executes both algorithm and animation
 })
 
