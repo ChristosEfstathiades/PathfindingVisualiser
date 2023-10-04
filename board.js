@@ -112,6 +112,13 @@ class Board
         }
     }
 
+    toggleDrag(e) 
+    {
+        
+        board.hoverEnabled = !board.hoverEnabled // Passing the boolean value through a not gate
+        
+    }
+
     draggable(element, draggable) 
     {
         element.setAttribute('draggable', draggable) 

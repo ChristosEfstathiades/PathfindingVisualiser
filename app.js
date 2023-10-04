@@ -3,7 +3,9 @@ let board = new Board();
 document.addEventListener("keydown", board.toggleHover)
 
 let toggleObstacleBtn = document.querySelector('#toggle_obstacle')
+let toggleDragBtn = document.querySelector('#toggle_drag')
 toggleObstacleBtn.addEventListener("click", board.toggleObstacle)
+toggleDragBtn.addEventListener("click", board.toggleDrag)
 document.addEventListener("keydown", board.toggleObstacle)
 
 let startBtn = document.querySelector("#start")
